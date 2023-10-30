@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--link moment and time zone -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://momentjs.com/downloads/moment-timezone-with-data-1970-2030.min.js"></script>
-    <title>Time Zone Dropdown</title>
+
+    <!-- link css to html, important to have css AFTER bootstrap link -->
+    <link rel="stylesheet" href="src/style.css" />
+    <title>World Clock</title>
   </head>
   <body>
     <h1>World Clock</h1>
@@ -22,20 +26,7 @@
         <option value="Australia/Sydney">Sydney, Australia 🐨</option>
       </select>
     </form>
-    <script>
-      function selectedDropdown(event) {
-        // don't alert the default without value, checking value selected against only 3 value options
-        if (event.target.value.length > 0) {
-          let timeZone = moment()
-            .tz(event.target.value)
-            .format("dddd, MMMM D, YYYY H:mm A");
-
-          alert(`It is ${timeZone} in ${event.target.value}`);
-        }
-      }
-
-      let nameSelect = document.querySelector("#selectCity");
-      nameSelect.addEventListener("change", selectedDropdown);
-    </script>
+    <!--link html and java script-->
+    <script src="src/script.js"></script>
   </body>
 </html>
