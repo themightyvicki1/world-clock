@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment-timezone-with-data-1970-2030.min.js"></script>
+    <title>Time Zone Dropdown</title>
+  </head>
+  <body>
+    <form action="/submit">
+      <select name="selectCity" id="selectCity">
+        <option value="">Select a city...</option>
+        <option value="Europe/Paris">Paris, France 🥖</option>
+        <option value="Asia/Tokyo">Tokyo, Japan 🎌</option>
+        <option value="Australia/Sydney">Sydney, Australia 🐨</option>
+      </select>
+    </form>
+    <script>
+      function selectedDropdown(event) {
+        // don't alert the default without value, checking value selected against only 3 value options
+        if (event.target.value.length > 0) {
+          let timeZone = moment()
+            .tz(event.target.value)
+            .format("dddd, MMMM D, YYYY H:mm A");
+
+          alert(`It is ${timeZone} in ${event.target.value}`);
+        }
+      }
+
+      let nameSelect = document.querySelector("#selectCity");
+      nameSelect.addEventListener("change", selectedDropdown);
+    </script>
+  </body>
+</html>
