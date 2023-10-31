@@ -1,3 +1,8 @@
-h1 {
-  color: darkolivegreen;
+body {
+  text-align: center;
+}
+
+.container {
+  border: 5px solid black;
+  width: 400px;
 }

@@ -12,20 +12,32 @@
     <title>World Clock</title>
   </head>
   <body>
-    <h1>World Clock</h1>
-    <footer>
-      <a href="https://github.com/themightyvicki1/world-clock" target="_blank"
-        >Open source code </a
-      >by Victoria Greer
-    </footer>
-    <form action="/submit">
+    <div class="container">
+      <h1>World Clock</h1>
+
       <select name="selectCity" id="selectCity">
         <option value="">Select a city...</option>
         <option value="Europe/Paris">Paris, France 🥖</option>
         <option value="Asia/Tokyo">Tokyo, Japan 🎌</option>
         <option value="Australia/Sydney">Sydney, Australia 🐨</option>
       </select>
-    </form>
+
+      <div class="city">
+        <h2>Los Angeles, CA</h2>
+        <div class="date">Date</div>
+        <div class="time">Time</div>
+      </div>
+      <div class="city">
+        <h2>Jacksonville, FL</h2>
+        <div class="date">Date</div>
+        <div class="time">Time</div>
+      </div>
+      <footer>
+        <a href="https://github.com/themightyvicki1/world-clock" target="_blank"
+          >Open source code </a
+        >by Victoria Greer
+      </footer>
+    </div>
     <!--link html and java script-->
     <script src="src/script.js"></script>
   </body>
