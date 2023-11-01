@@ -9,13 +9,20 @@
 
     <!-- link css to html, important to have css AFTER bootstrap link -->
     <link rel="stylesheet" href="src/style.css" />
+    <!-- link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <title>World Clock</title>
   </head>
   <body>
     <div class="container">
       <h1>World Clock</h1>
 
-      <select name="selectCity" id="selectCity">
+      <select name="selector" id="selector">
         <option value="">Select a city...</option>
         <option value="Europe/Paris">Paris, France 🥖</option>
         <option value="Asia/Tokyo">Tokyo, Japan 🎌</option>
@@ -23,21 +30,32 @@
       </select>
 
       <div class="city">
-        <h2>Los Angeles, CA</h2>
-        <div class="date">Date</div>
-        <div class="time">Time</div>
+        <div id="each-city">
+          <h2>Sacramento</h2>
+          <div class="date">Date</div>
+        </div>
+        <div class="time">1:45:15 <small id="ampm">AM</small></div>
       </div>
       <div class="city">
-        <h2>Jacksonville, FL</h2>
-        <div class="date">Date</div>
-        <div class="time">Time</div>
+        <div id="each-city">
+          <h2>Jacksonville</h2>
+          <div class="date">Date</div>
+        </div>
+        <div class="time">1:45:15 <small id="ampm">AM</small></div>
       </div>
-      <footer>
-        <a href="https://github.com/themightyvicki1/world-clock" target="_blank"
-          >Open source code </a
-        >by Victoria Greer
-      </footer>
+      <div class="city">
+        <div id="each-city">
+          <h2>Gibraltar</h2>
+          <div class="date">Date</div>
+        </div>
+        <div class="time">1:45:15 <small id="ampm">AM</small></div>
+      </div>
     </div>
+    <footer id="coded-by">
+      <a href="https://github.com/themightyvicki1/world-clock" target="_blank"
+        >Open source code </a
+      ><strong>by Victoria Greer</strong>
+    </footer>
     <!--link html and java script-->
     <script src="src/script.js"></script>
   </body>

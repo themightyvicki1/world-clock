@@ -1,8 +1,76 @@
-body {
+h1 {
+  font-size: 14px;
   text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  color: cornflowerblue;
+  /* this margin 0 will keep the city name and date closer together, no space between */
+  margin: 0;
 }
 
 .container {
   border: 5px solid black;
-  width: 400px;
+  max-width: 400px;
+  /*to center*/
+  margin: 0 auto;
+  /*space around*/
+  padding: 30px;
+  box-shadow: 6px 5px 5px rgb(198, 57, 184);
+  border-radius: 10px;
+  font-family: "Manrope", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  background: white;
+}
+
+#selector {
+  display: block;
+  width: 70%;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 30px auto;
+  font-size: 14px;
+  font-family: "Manrope", sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+#selector:hover {
+  cursor: pointer;
+}
+
+.city {
+  display: flex;
+  justify-content: space-between;
+  /*adds space between each city/time */
+  margin: 10px 0;
+  border-bottom: 1px dashed gray;
+  padding: 20px 0;
+}
+
+/* remove border from last city's bottom */
+.city:last-child {
+  border: none;
+}
+
+.time {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#ampm {
+  font-size: 15px;
+  vertical-align: middle;
+  line-height: 30px;
+}
+
+.date {
+  opacity: 0.7;
+}
+
+#coded-by {
+  text-align: center;
+  color: gray;
+  padding-top: 20px;
+  font-size: 16px;
 }
