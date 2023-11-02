@@ -4,6 +4,10 @@ function selectedDropdown(event) {
     // if one of the options from drop down is selected other than the label then it'll update the time every 1 second
     setInterval(function () {
       let cityTimeZone = event.target.value;
+      // if current value is selected from drop down it'll guess timezone
+      if (cityTimeZone === "current") {
+        cityTimeZone = moment.tz.guess();
+      }
       let nameOfCity = cityTimeZone.replace("_", " ").split("/")[1];
       let cityTime = moment().tz(cityTimeZone);
 
@@ -36,7 +40,7 @@ function updateTimes() {
   // target city one's time
   let cityOneTimeElement = cityOneElement.querySelector(".time");
   // time for first city
-  let cityOneTime = moment().tz("America/Los_Angeles");
+  let cityOneTime = moment().tz("Asia/Singapore");
   cityOneDateElement.innerHTML = cityOneTime.format("MMMM Do, YYYY");
   cityOneTimeElement.innerHTML = `${cityOneTime.format(
     "h:mm:ss"
