@@ -1,23 +1,29 @@
 h1 {
-  font-size: 14px;
+  font-size: 18px;
   text-align: center;
+  color: #430f58;
 }
 
 h2 {
   font-size: 24px;
-  color: cornflowerblue;
+  color: #430f58;
   /* this margin 0 will keep the city name and date closer together, no space between */
   margin: 0;
 }
 
+body {
+  padding: 30px;
+  background: #fafafa;
+}
+
 .container {
-  border: 5px solid black;
+  border: 5px solid #5c5470;
   max-width: 400px;
   /*to center*/
   margin: 0 auto;
   /*space around*/
   padding: 30px;
-  box-shadow: 6px 5px 5px #cadefc;
+  box-shadow: 6px 5px 5px #c3bef0;
   border-radius: 10px;
   font-family: "Manrope", sans-serif;
   font-family: "Montserrat", sans-serif;
@@ -33,6 +39,7 @@ h2 {
   font-size: 14px;
   font-family: "Manrope", sans-serif;
   font-family: "Montserrat", sans-serif;
+  background: #edb1f1;
 }
 
 #selector:hover {
@@ -56,6 +63,7 @@ h2 {
 .time {
   font-size: 36px;
   font-weight: bold;
+  color: #430f58;
 }
 
 #ampm {
@@ -70,12 +78,16 @@ h2 {
 
 #coded-by {
   text-align: center;
-  color: gray;
+  color: #5c5470;
   padding-top: 20px;
   font-size: 16px;
+  font-family: "Manrope", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* the all cities link back to list */
 #link-back {
   font-size: 12px;
+  font-family: "Manrope", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
