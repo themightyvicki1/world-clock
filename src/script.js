@@ -1,14 +1,16 @@
 function selectedDropdown(event) {
   // don't alert the default without value, checking value selected against only 3 value options
   if (event.target.value.length > 0) {
-    let cityTimeZone = event.target.value;
-    let nameOfCity = cityTimeZone.replace("_", " ").split("/")[1];
-    let cityTime = moment().tz(cityTimeZone);
+    // if one of the options from drop down is selected other than the label then it'll update the time every 1 second
+    setInterval(function () {
+      let cityTimeZone = event.target.value;
+      let nameOfCity = cityTimeZone.replace("_", " ").split("/")[1];
+      let cityTime = moment().tz(cityTimeZone);
 
-    //alert(`It is ${timeZone} in ${event.target.value}`);
+      //alert(`It is ${timeZone} in ${event.target.value}`);
 
-    let selectedElement = document.querySelector("#cities");
-    selectedElement.innerHTML = `<div class="city">
+      let selectedElement = document.querySelector("#cities");
+      selectedElement.innerHTML = `<div class="city">
           <div class = "eachCity">
             <h2>${nameOfCity}</h2>
             <div class="date">${cityTime.format("MMMM Do, YYYY")}</div>
@@ -16,6 +18,7 @@ function selectedDropdown(event) {
           <div class="time">${cityTime.format(
             "h:mm:ss"
           )} <small id = "ampm">${cityTime.format("A")}</small></div>`;
+    }, 1000);
   }
 }
 // select the select drop down
