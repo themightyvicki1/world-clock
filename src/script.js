@@ -21,7 +21,8 @@ function selectedDropdown(event) {
           </div>
           <div class="time">${cityTime.format(
             "h:mm:ss"
-          )} <small id = "ampm">${cityTime.format("A")}</small></div>`;
+          )} <small id = "ampm">${cityTime.format("A")}</small></div>
+      `;
     }, 1000);
   }
 }
