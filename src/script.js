@@ -12,10 +12,11 @@ function selectedDropdown(event) {
 let nameSelect = document.querySelector("#selector");
 nameSelect.addEventListener("change", selectedDropdown);
 
-// use set interval function to keep time updating
-// this code was made not in its own function so in setInterval use a function without a name
-// update every 1 second (1000)
-setInterval(function () {
+// moved all updates into one function, set interval to call this function and start with a function call here so it updates right when loaded
+function updateTimes() {
+  // use set interval function to keep time updating
+  // this code was made not in its own function so in setInterval use a function without a name
+  // update every 1 second (1000)
   // target first city's date, selecting the element then class in element
   let cityOneElement = document.querySelector("#city-one");
   let cityOneDateElement = cityOneElement.querySelector(".date");
@@ -27,9 +28,7 @@ setInterval(function () {
   cityOneTimeElement.innerHTML = `${cityOneTime.format(
     "h:mm:ss"
   )} <small id = "ampm">${cityOneTime.format("A")}</small>`;
-}, 1000);
 
-setInterval(function () {
   // target second city's date, selecting the element then class in element
   let cityTwoElement = document.querySelector("#city-two");
   let cityTwoDateElement = cityTwoElement.querySelector(".date");
@@ -41,9 +40,7 @@ setInterval(function () {
   cityTwoTimeElement.innerHTML = `${cityTwoTime.format(
     "h:mm:ss"
   )} <small id = "ampm">${cityTwoTime.format("A")}</small>`;
-}, 1000);
 
-setInterval(function () {
   // target third city's date, selecting the element then class in element
   let cityThreeElement = document.querySelector("#city-three");
   let cityThreeDateElement = cityThreeElement.querySelector(".date");
@@ -55,4 +52,7 @@ setInterval(function () {
   cityThreeTimeElement.innerHTML = `${cityThreeTime.format(
     "h:mm:ss"
   )} <small id = "ampm">${cityThreeTime.format("A")}</small>`;
-}, 1000);
+}
+
+updateTimes();
+setInterval(updateTimes, 1000);
