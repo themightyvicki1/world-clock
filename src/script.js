@@ -9,6 +9,7 @@ function selectedDropdown(event) {
   }
 }
 
+// select the select drop down
 let nameSelect = document.querySelector("#selector");
 nameSelect.addEventListener("change", selectedDropdown);
 
