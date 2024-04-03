@@ -91,3 +91,8 @@ body {
   font-family: "Manrope", sans-serif;
   font-family: "Montserrat", sans-serif;
 }
+
+footer a {
+  text-decoration: none;
+  font-size: 12px;
+}
